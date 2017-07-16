@@ -419,8 +419,8 @@ namespace CCM
                     double y = (area.geometry.y - win_area.y) - (((win_area.height * scale) - area.geometry.height) / 2.0);
 
                     // Add progress offset to position
-                    x += ((win_area.x - x) * progress) - ((progress) * win_area.x);
-                    y += ((win_area.y - y) * progress) - ((progress) * win_area.y);
+                    x += ((win_area.x - x) * progress) - (progress * win_area.x);
+                    y += ((win_area.y - y) * progress) - (progress * win_area.y);
 
                     // Apply transformation to window
                     Cairo.Matrix matrix = Cairo.Matrix(scale, 0, 0, scale, x, y);
